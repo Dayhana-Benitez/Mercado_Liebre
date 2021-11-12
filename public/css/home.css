@@ -1,0 +1,88 @@
+/* Banner */
+
+.home .banner{
+    display: none;
+}
+
+/* Home */
+
+main.home {
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* Section*/
+
+.home .section-title {
+    margin: 25px 0;
+}
+
+.home .card {
+    background-color: white;
+    margin-bottom: 10px;
+
+}
+
+.home .card.card-content {
+    border-top: 1px solid var(--light-grey);
+    padding: 15px;
+    position: relative;
+}
+
+.home .card .card-content .icon-truck {
+    border: 1px solid var(--green);
+    border-radius: 50%;
+    width: fit-content;
+    width: -noz-fit-content;
+    padding: 5px;
+    position: absolute;
+    top: -15px;
+    right: 20px;
+}
+
+.home .card .card.card-content .icon-truck i {
+    color: var(--green);
+    font-size: 16px;
+}
+
+.home .card .card-content .product-info{
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 5px;
+}
+
+.home .card.card-content .product-info p:nth-child(1) {
+    flex-grow: 0.3;
+}
+
+.home .card.card-content .product-info p:nth-child(2){
+    color: var(--green);
+    font-size: 16px;
+    flex-grow: 0.7;
+}
+
+
+.home .card.card-content .product-nane {
+    color: var(--green);
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+
+
+/* Media queries */
+/* Desktop*/
+@media (min-width: 361px) {
+    .home .card{
+        box-shadow: 0px 0px 10px rgba(100, 100, 100);
+    }
+    .home .card.card-content .product-nane{
+        display: block;
+    }
+}
+
+@media (min-width: 769px){
+    .burger-menu {
+        display: block;
+    }
+}
