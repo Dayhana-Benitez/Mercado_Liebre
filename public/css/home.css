@@ -1,20 +1,31 @@
+nav {
+    display: none;
+}
+
 /* Banner */
 
 .home .banner{
     display: none;
 }
 
-/* Home */
+/* MAIN */
 
 main.home {
-    margin: 0 auto;
     width: 90%;
+    margin: 0 auto;  
 }
 
 /* Section*/
 
+.container-article {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .home .section-title {
     margin: 25px 0;
+    color: var(--dark-grey);
 }
 
 .home .card {
@@ -23,7 +34,7 @@ main.home {
 
 }
 
-.home .card.card-content {
+.home .card .card-content {
     border-top: 1px solid var(--light-grey);
     padding: 15px;
     position: relative;
@@ -33,7 +44,7 @@ main.home {
     border: 1px solid var(--green);
     border-radius: 50%;
     width: fit-content;
-    width: -noz-fit-content;
+    width: -moz-fit-content;
     padding: 5px;
     position: absolute;
     top: -15px;
@@ -45,44 +56,94 @@ main.home {
     font-size: 16px;
 }
 
+.card-content .icon-truck i:hover{
+    transform: rotate(-90deg);
+    transition: 1.2s ;
+}
+
 .home .card .card-content .product-info{
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     padding: 5px;
 }
 
-.home .card.card-content .product-info p:nth-child(1) {
+.home .card .card-content .product-info p:nth-child(1) {
     flex-grow: 0.3;
 }
 
-.home .card.card-content .product-info p:nth-child(2){
+.home .card .card-content .product-info p:nth-child(2){
     color: var(--green);
-    font-size: 16px;
+    font-size: 14px;
     flex-grow: 0.7;
 }
 
 
-.home .card.card-content .product-nane {
-    color: var(--green);
+.home .card .card-content .product-name {
+    display: none;
+    color: var(--dark-grey);
     font-size: 15px;
     margin-top: 15px;
 }
 
-
-
 /* Media queries */
-/* Desktop*/
+/* Tablet*/
+
 @media (min-width: 361px) {
-    .home .card{
-        box-shadow: 0px 0px 10px rgba(100, 100, 100);
+    .container-cards {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
-    .home .card.card-content .product-nane{
+
+    .home .card{
+        width: 45%;
+    }
+
+    .card:hover {
+        box-shadow: 0 0 10px rgb(100, 100, 100);
+        transition: all 1s;
+    }
+
+    .home .section-title {
         display: block;
     }
+
+    .home .card .card-content .product-name{
+        display: block;
+        opacity: 0%;
+    }
+
+    .product-name:hover {
+        animation: product 2s;
+    }
+
+    @keyframes product {
+        0% {opacity: 0%;}
+        75% {opacity: 75%;}
+        100% {opacity: 100%;}
+    }
 }
+
+/*Desktop*/
 
 @media (min-width: 769px){
     .burger-menu {
         display: block;
+    }
+
+    nav {
+        display: block;
+    }
+
+    .container-cards {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .home .card {
+        width: 23%;
     }
 }

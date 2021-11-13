@@ -6,19 +6,32 @@ header {
     padding-bottom: 10px;
 }
 
+/*LOGO*/
+
+.container-logo{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
 header .burger-menu {
     background-color: var(--light_blue);
-    color: white;
-    width: 15px;
-    padding: 7px;
+    color: #fff;
+    width: 25px;
+    padding: 8px;
     border-radius: 5px;
     text-align: center;
     margin: 10px auto 0;
+    cursor: pointer;
 }
 
 header .logo {
-    width: 130px;
-    margin-left: 25px;
+    width: 50%;
+    margin-right: 5px;
     padding-top: 25px;
     margin-bottom: 10px;
 }
@@ -26,8 +39,17 @@ header .logo {
 /* Search bar*/
 
 header .search-bar {
-    display: inline-block;
+    width: 50%;
+    display: flex;
     margin-left: 15px;
+}
+
+header .search-bar input {
+    width: 85%;
+}
+
+header .search-bar button {
+    width: 15%;
 }
 
 /* Quota*/
@@ -40,8 +62,45 @@ header .quota{
 /* Nav */
 
 header nav ul#top-list {
-    margin-bottom: 15px;
-
+    margin-bottom: 25px;
 }
 
-/* End Header*/
+/*Version Desktop*/
+
+@media (min-width: 769px) {
+    .container-desktop {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+       /*  height: 150px; */
+    }
+
+    .container-logo {
+        width: 65%;
+        margin-right: 25px;
+    }
+
+    .quota {
+        width: 35%;
+    }
+
+    .nav-mercadoliebre {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 40px;
+        align-items: flex-end;
+    }
+
+    .nav-mercadoliebre ul {
+        display: flex;
+        width: 30%;
+        justify-content: space-evenly;
+    }
+
+    header nav ul#top-list {
+        margin-bottom: 0;
+    }
+}
